@@ -137,6 +137,46 @@ fun main(args: Array<String>) {
     v3.a()
     v3.minus()
     v3.a()
+
+    // ==== lesson 14 ====
+
+    var index: Int = 0
+
+    while (index < 10) {
+        println("YO: ")
+        index++
+    }
+
+    index = 0
+
+    do {
+        println("YO: ")
+        index++
+    } while (index < 10)
+
+    var nums = 1..10
+
+    for (value in nums) {
+        print("$value ")
+    }
+
+    for (value in nums step 2) {
+        print("$value ")
+    }
+
+    for (value in 10 downTo 1 step 3) {
+        print("$value ")
+    }
+
+    // ==== lesson 15 ====
+
+    val value = 5
+
+    println(value in nums)
+
+    val characters = 'a'..'z'
+
+    println(isChar('i', characters))
 }
 
 fun myFirstFunction() : Int {
@@ -162,3 +202,5 @@ fun getFavoriteColor(color: Color) = when (color) {
     Color.RED -> "Red"
     Color.GREEN -> "Green"
 }
+
+fun isChar(char: Char, characters: CharRange) = char in characters
